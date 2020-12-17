@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html {
+	font-size: 90%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #17181a;
+	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
+	position: relative;
+}
+
+main {
+	position: absolute;
+}
+
+body.hide {
+	overflow: hidden;
+}
+
+.nav-header {
+	min-height: 10vh;
+	position: relative;
+	font-size: 1rem;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: white;
+	width: 80%;
+	margin: auto;
+	padding: 2rem 0;
+}
+
+#logo {
+	color: white;
+	font-family: 'Abril Fatface';
+}
+
+.line-1,
+.line-2 {
+	width: 3rem;
+	height: 0.2em;
+	margin: 0.4rem;
+	background: white;
+	pointer-events: none;
+}
+
+.slide {
+	min-height: 100vh;
+	margin: 0 auto 0 auto;
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+	background: #17181a;
+	z-index: 0;
+}
+
+.hero-img {
+	flex: 2;
+	flex-basis: 25rem;
+	position: relative;
+	overflow: hidden;
+	background: #17181a;
+}
+
+.hero-img img {
+	width: 100%;
+	height: 100%;
+}
+
+.reveal-img,
+.reveal-text {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #17181a;
+	left: 0;
+	top: 0;
+}
+
+.hero-desc {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex: 3;
+	flex-basis: 25rem;
+	padding-left: 5rem;
+	position: relative;
+}
+
+.hero-desc h2 {
+	font-family: 'Abril Fatface';
+	font-size: 5rem;
+}
+
+.mountain-span {
+	color: rgb(86, 124, 228);
+}
+
+.hike-span {
+	color: rgb(167, 110, 231);
+}
+
+.fashion-span {
+	color: rgb(255, 139, 93);
+}
+
+.hero-desc p {
+	padding: 3rem 0;
+	font-size: 1.5rem;
+	color: rgb(223, 223, 223);
+}
+
+.explore {
+	padding: 1rem 2rem;
+	background: none;
+	border: none;
+	color: white;
+	border: 1px solid white;
+	font-size: 1rem;
+	text-decoration: none;
+	align-self: flex-start;
+	cursor: pointer;
+}
+
+.nav-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: white;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	opacity: 1;
+	clip-path: circle(50px at 100% -10%);
+	-webkit-clip-path: circle(50px at 100% -10%);
+}
+
+.burger {
+	cursor: pointer;
+}
+
+.nav-links {
+	font-size: 3rem;
+	flex-basis: 30rem;
+}
+
+.nav-links h3 {
+	padding: 3rem 0rem;
+}
+
+.contact {
+	flex-basis: 30rem;
+}
+
+.contact h2 {
+	font-size: 3rem;
+	padding: 2rem 0rem;
+}
+
+.contact p {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+
+.cursor {
+	width: 3rem;
+	height: 3rem;
+	border: 2px solid white;
+	border-radius: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	transition: all 0.5s ease-in-out;
+	transition-property: background, transform;
+	transform-origin: 100% 100%;
+}
+
+.cursor-text {
+	font-family: 'Abril Fatface';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -200%);
+	font-size: 0.5rem;
+}
+
+.cursor.nav-active {
+	transform: scale(2);
+	background: rgb(86, 124, 228);
+}
+
+.cursor.explore-active {
+	mix-blend-mode: difference;
+	transform: scale(2);
+	background: white;
+}
+
+.title {
+	position: relative;
+	overflow: hidden;
+}
+
+.title-swipe {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: lightblue;
+	mix-blend-mode: darken;
+	pointer-events: none;
+	transform: translateY(100%);
+}
+
+.t-swipe-1 {
+	background: rgb(86, 124, 228);
+}
+
+.t-swipe-2 {
+	background: rgb(167, 110, 231);
+}
+
+.t-swipe-3 {
+	background: rgb(255, 139, 93);
+}
+
+.scrollmagic-pin-spacer {
+	position: static !important;
+}
+
+/* Other Pages */
+
+.fashion-1,
+.fashion-2,
+.fashion-3 {
+	min-height: 90vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 70%;
+	margin: auto;
+	color: white;
+	margin-top: 5rem;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.fashion-img {
+	height: 80vh;
+	flex-basis: 30rem;
+}
+
+.fashion-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.fashion-text {
+	flex: 1;
+	position: relative;
+	flex-basis: 25rem;
+}
+
+.fashion-text h1 {
+	font-size: 6rem;
+	padding: 5rem 0rem;
+}
+
+.fashion-1 h1 {
+	color: rgb(86, 124, 228);
+}
+
+.fashion-2 h1 {
+	color: rgb(255, 139, 93);
+}
+
+.fashion-3 h1 {
+	color: rgb(167, 110, 231);
+}
+
+.fashion-text p {
+	font-size: 2rem;
+	padding: 2rem 2rem 0rem 0rem;
+	margin-bottom: 10rem;
+}
+
+.fashion-nr {
+	font-size: 15rem;
+	position: absolute;
+	left: 40%;
+	bottom: 10%;
+	color: white;
+	opacity: 0.2;
+}
+
+.swipe {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transform: translateX(-100%);
+}
+
+.swipe-1 {
+	background: rgb(167, 110, 231);
+	z-index: 5;
+}
+
+.swipe-2 {
+	background: rgb(86, 124, 228);
+	z-index: 4;
+}
+
+.swipe-3 {
+	background: rgb(255, 139, 93);
+	z-index: 3;
+}
+
+@media screen and (max-width: 1200px) {
+	.hero-img {
+		height: 50vh;
+	}
+
+	.fashion-nr {
+		font-size: 8rem;
+	}
+
+	.fashion-text h1 {
+		font-size: 2rem;
+		padding: 1rem 0rem;
+	}
+
+	.fashion-text p {
+		font-size: 1.2rem;
+	}
+
+	.fashion-img img {
+		height: 50vh;
+		object-fit: top;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	main {
+		width: 100%;
+		margin: 0;
+	}
+
+	.slide {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	.hero-img {
+		padding-top: 4rem;
+	}
+	.hero-img img {
+		object-fit: cover;
+	}
+
+	.hero-desc {
+		padding: 0;
+	}
+
+	.hero-desc h2 {
+		font-size: 1.6rem;
+		padding: 1rem 0rem;
+	}
+
+	.hero-desc p {
+		font-size: 1rem;
+		padding: 2rem 1rem;
+		line-height: 1.5rem;
+		text-align: center;
+	}
+
+	.explore {
+		width: 60%;
+		margin: auto;
+	}
+
+	.detail-slide {
+		width: 100%;
+		text-align: center;
+	}
+
+	.fashion-text h1 {
+		margin: 2rem 0rem;
+	}
+
+	.fashion-text p {
+		margin-bottom: 5rem;
+	}
+
+	.fashion-nr {
+		top: 20%;
+		right: 20%;
+	}
+
+	.nav-bar {
+		display: block;
+	}
+
+	.nav-links {
+		font-size: 1.5rem;
+		text-align: center;
+		transform: translateY(30%);
+	}
+	.nav-links h3 {
+		padding: 3rem;
+	}
+
+	.contact {
+		margin: 0 auto;
+		width: 80%;
+		transform: translateY(60%);
+	}
+
+	.contact h2 {
+		padding: 1rem;
+		font-size: 2.4rem;
+		text-align: center;
+	}
+
+	.contact p {
+		font-size: 1rem;
+		padding: 1rem;
+		text-align: center;
+		line-height: 1.5rem;
+	}
+}
